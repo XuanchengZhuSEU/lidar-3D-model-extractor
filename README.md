@@ -33,8 +33,6 @@ python .\test.py
 
 ## 3. `utils.py` 函数总览
 
-> 说明：以下为主要公开函数。`_export_obj_with_groups(...)` 为内部辅助函数，一般不直接调用。
-
 ### 3.1 `get_classification_stats(las_file_path)`
 
 统计 LAS 中各 `classification` 的点数。
