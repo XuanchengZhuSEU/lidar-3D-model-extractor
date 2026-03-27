@@ -1,4 +1,4 @@
-# LiDAR Reconstruction 使用说明
+# LiDAR 3D model extractor 使用说明
 
 本项目围绕 `utils.py` 提供了一组针对 LAS 点云与建筑物矢量化/可视化的工具函数，并在 `test.py` 中给出了可直接运行的示例流程。
 
@@ -14,6 +14,8 @@
 ---
 
 ## 2. 环境与依赖
+
+本项目围绕 Python 3.12.7 下运行正常
 
 ### 激活虚拟环境（PowerShell）
 
