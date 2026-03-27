@@ -1,4 +1,4 @@
-# LiDAR Reconstruction Utils 使用说明
+# LiDAR Reconstruction 使用说明
 
 本项目围绕 `utils.py` 提供了一组针对 LAS 点云与建筑物矢量化/可视化的工具函数，并在 `test.py` 中给出了可直接运行的示例流程。
 
