@@ -15,18 +15,17 @@
 
 ## 2. 环境与依赖
 
-建议在项目虚拟环境 `lidar_env` 中运行。
-
 ### 激活虚拟环境（PowerShell）
 
 ```powershell
-& .\lidar_env\Scripts\Activate.ps1
+& python -m venv lidar_env
+& lidar_env/Scripts/activate
 ```
 
-### 运行示例
+### 安装包
 
 ```powershell
-python .\test.py
+pip install -r requirements.txt
 ```
 
 ---
