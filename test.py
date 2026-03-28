@@ -14,7 +14,7 @@ from utils import (
 
 def main():
     """
-    Detailed examples for utility functions in utils.py.
+    Detailed examples for utility functions in utils.py
     Data source: points_cloud_data/test_lidar.las
     """
     # -------------------------------------------------------------------------
@@ -42,14 +42,26 @@ def main():
     # 2) Execution switches
     #    Set True to run that example.
     # -------------------------------------------------------------------------
-    run_get_classification_stats = True
+
+    ## this part is for point clouds processing
+    # run_get_classification_stats = True
+    # run_merge_las_files = False
+    # run_las_to_shp = True
+    # run_visualize_shp_3d = False
+    # run_shp_to_blender = True
+    # run_visualize_las_pointcloud = False
+    # run_extract_from_las = True
+    # run_visualize_reflection_intensity = False
+
+    ## this part is for visualization
+    run_get_classification_stats = False
     run_merge_las_files = False
-    run_las_to_shp = True
-    run_visualize_shp_3d = False
-    run_shp_to_blender = True
-    run_visualize_las_pointcloud = False
-    run_extract_from_las = True
-    run_visualize_reflection_intensity = False
+    run_las_to_shp = False
+    run_visualize_shp_3d = True
+    run_shp_to_blender = False
+    run_visualize_las_pointcloud = True
+    run_extract_from_las = False
+    run_visualize_reflection_intensity = True
 
     # -------------------------------------------------------------------------
     # 3) get_classification_stats example
