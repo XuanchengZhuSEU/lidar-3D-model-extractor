@@ -234,7 +234,7 @@ def las_to_shp(las_file_path, output_shp_path,
         
         if verbose:
             print(f"Saving Shapefile to: {output_shp_path}")
-        buildings_gdf.to_file(output_shp_path)
+        buildings_gdf.to_file(output_shp_path, engine="fiona")
         
         if verbose:
             print(f"Successfully processed {len(buildings_gdf)} buildings")
@@ -269,7 +269,7 @@ def visualize_shp_3d(
     import random as _random
 
     try:
-        gdf = gpd.read_file(shp_path)
+        gdf = gpd.read_file(shp_path, engine="fiona")
     except Exception as e:
         # Common issue: missing .shx index file (pyogrio/GDAL raises DataSourceError)
         msg = str(e)
@@ -277,7 +277,7 @@ def visualize_shp_3d(
             import os
             os.environ["SHAPE_RESTORE_SHX"] = "YES"
             try:
-                gdf = gpd.read_file(shp_path)
+                gdf = gpd.read_file(shp_path, engine="fiona")
                 print("Note: detected missing .shx; enabled SHAPE_RESTORE_SHX=YES and read successfully.")
             except Exception:
                 # In some environments, switching to Fiona is more compatible
@@ -517,7 +517,7 @@ def shp_to_blender(
     # Read Shapefile
     if verbose:
         print(f"Reading Shapefile: {shp_path}")
-    gdf = gpd.read_file(shp_path)
+    gdf = gpd.read_file(shp_path, engine="fiona")
     if gdf.empty:
         print("No features found in the Shapefile; cannot convert.")
         return None if merge_buildings else []
